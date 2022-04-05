@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <header>
+    <a routerLink="/home"><i class="bx bx-left-arrow-alt"></i></a>
+    WeatherApp
+  </header>
+  <section class="weather-part">
+    <img src="../assets/Rolling-1s-200px.svg" alt="" *ngIf="vis" class="small">
+    <img src="../assets/animated/{{data.data[0].weather.code}}.svg" alt=""class="pic">
+     <div *ngIf="visible">
+      <div class="temp">
+        <span class="numb">{{data.data[0].temp}} <span class="weight">°</span> </span>
+      </div>
+      <div class="weather">{{data.data[0].weather.description}}</div>
+      <div class="location">
+        <i class="bx bx-map"></i>
+        <span class="" > {{data.data[0].city_name}}</span>
+      </div>
+      <div class="bottom-details">
+        <div class="column feels">
+          <i class="bx bxs-thermometer"></i>
+          <div class="details">
+            <div class="">
+              <span class="numb-2">{{data.data[0].app_temp}}</span>
+              <span class="deg">°C</span>
+            </div>
+            <p>Feels like</p>
+          </div>
+        </div>
+        <div class="column humidity">
+          <i class="bx bxs-droplet-half"></i>
+          <div class="details">
+              <span>{{data.data[0].rh}}</span>
+              <p>Humidity</p>
+          </div>
+      </div>
+      </div>
+     </div>
+  </section>
+</div>

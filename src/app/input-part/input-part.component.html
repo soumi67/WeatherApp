@@ -1,0 +1,11 @@
+<div class="wrapper"*ngIf="visible">
+    <header>
+        WeatherApp
+    </header>
+    <section class="input-part">
+        <p class="info-text error" *ngIf="vis">Please fill out this field</p>
+        <input type="text" placeholder="Enter city name" spellcheck="false" required #data>
+        <div class="seprator"></div>
+        <button (click)="btnClick(data.value);ErroMessage()">Get Device Location</button>
+    </section>
+</div>
